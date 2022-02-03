@@ -50,14 +50,7 @@ typings/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
-.eslintcache
 
-# Optional .husky directory
-.husky
-
-#Optional analytics file
-6
 
 # Microbundle cache
 .rpt2_cache/

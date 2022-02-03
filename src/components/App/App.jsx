@@ -10,8 +10,6 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const totalfeedback = good + neutral + bad;
-
   const handleLeaveFeedback = feedback => {
     switch (feedback) {
       case 'good':
@@ -29,10 +27,10 @@ export const App = () => {
     }
   };
 
+  const totalFeedback = good + neutral + bad;
   const countPositiveFeedbackPercentage = () => {
-    return good === 0 ? 0 : Math.round((good / totalfeedback) * 100);
+    return good === 0 ? 0 : Math.round((good / totalFeedback) * 100);
   };
-
   const options = ['good', 'neutral', 'bad'];
 
   return (
@@ -43,13 +41,13 @@ export const App = () => {
           onLeaveFeedback={handleLeaveFeedback}
         />
       </Section>
-      {totalfeedback !== 0 ? (
+      {totalFeedback !== 0 ? (
         <Section title="Statistics">
           <Statistics
             good={good}
             neutral={neutral}
             bad={bad}
-            total={totalfeedback}
+            total={totalFeedback}
             positivePercentage={countPositiveFeedbackPercentage}
           />
         </Section>
